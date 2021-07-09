@@ -41,7 +41,6 @@ module.exports = {
 
   addCompliment: (req, res) => {
       const {compliment} = req.body
-      console.log('test')
       compliments.push(compliment)
 
       res.status(200).send(compliments[compliments.length - 1])

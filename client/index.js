@@ -35,11 +35,12 @@ motivationButton.addEventListener("click", () => {
 })
 
 addCompliment.addEventListener("click", () => {
-    console.log(text)
   axios
-    .post("http://localhost:4000/api/compliment/", {
+    .post("http://localhost:4000/api/compliment/", 
+    {
       compliment: text.value,
-    })
+    }
+    )
     .then((res) => alert(`${res.data} has been added to compliments!`))
 })
 
